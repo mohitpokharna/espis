@@ -9,7 +9,6 @@ from gtts import gTTS
 from opts import parse_opts
 
 from jarvis import jarvis, news_update, check_battery, take_rest, speak, recordAudio
-from pickle import pickle
 
 if __name__ == '__main__':
   opt = parse_opts()
@@ -17,7 +16,6 @@ if __name__ == '__main__':
 
   # initialization
   time.sleep(2)
-  pickle(opt)
   speak("Hi {}, welcome to dimension 214!".format(opt.user))
   while True:
     try:

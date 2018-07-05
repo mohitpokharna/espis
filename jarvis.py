@@ -21,8 +21,8 @@ def take_rest(opt):
  
 
 def jarvis(opt, data):
-
-  if "hi " in data or "hello" in data:
+  
+  if "hi" in data or "hello" in data:
     speak("Hey! I am ESPIS, or Extraordinarily Smart and Powerful Intelligent System, as the world would know me. How may I assist you?")
 
   # intro
@@ -93,7 +93,7 @@ def jarvis(opt, data):
     for root, dirs, files in os.walk('/home/{}/Downloads'.format(opt.user.lower())):
       for filename in files:
         if movie.lower() in filename.lower():
-          if root == "/home/mohit/Downloads/Movies":
+          if root == "/home/{}/Downloads/Movies".format(user.lower()):
             root_word = "Downloads, Movies folder"
           speak("Bingo the movie is located inside" + root)
           flag = 2
