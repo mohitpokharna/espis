@@ -1,14 +1,12 @@
 # This script works as a personalized jarvis
-# It started as a fun project in winter break
 # !/usr/bin/env python3
  
 import os
 import sys
-# import urllib.request, urllib.error, urllib.parse
 from bs4 import BeautifulSoup
 import http.client
 import requests
-import subprocess #to run bash commands
+import subprocess
 
 from utils import speak, recordAudio
 from music import play_playlist, play_random
@@ -20,7 +18,7 @@ def take_rest(opt):
     subprocess.call(["xset -display :0.0 dpms force off && sleep 10 && xset -display :0.0 dpms force on"],shell=True)
  
 
-def jarvis(opt, data):
+def espis(opt, data):
   
   if "hi" in data or "hello" in data:
     speak("Hey! I am ESPIS, or Extraordinarily Smart and Powerful Intelligent System, as the world would know me. How may I assist you?")
@@ -150,9 +148,7 @@ def news_update(opt):
     speak ("Time for a short break {}. Your hourly news update would soon begin!".format(opt.user))
     for topic in opt.news:
       news_url = "https://www.google.co.in/search?q="+topic+"&tbm=nws&rct=j"
-      # print(news_url)
       r = requests.get(news_url)
-      # print(r.status_code)
       soup = BeautifulSoup(r.text, "html.parser")
       a = soup.findAll("a")
       arr = []

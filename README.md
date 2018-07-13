@@ -1,17 +1,15 @@
-## Background
-
-This repo is still a WIP. It started as a fun project in Winters '17. 
+## [WIP]
 
 ## Installations
 
-'''bash
+```bash 
 sudo apt-get install libasound-dev portaudio19-dev libportaudio2 libportaudiocpp0 mpg321 acpi
-'''
+```
 
 Pip install requirements
-'''bash
+```bash
 pip install -r requirements.txt
-'''
+```
 
 ## How to use
 
